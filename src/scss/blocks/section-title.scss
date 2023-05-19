@@ -1,0 +1,9 @@
+@use "../mixins";
+
+.section-title {
+  display: inline-block;
+
+  @include mixins.respond-to(mobileOnly) {}
+
+  @include mixins.respond-to(tabletOnly) {}
+}

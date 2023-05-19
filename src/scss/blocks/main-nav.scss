@@ -1,0 +1,345 @@
+@use "../mixins";
+
+// Анимации для бургера
+@keyframes burger_before_default {
+  from {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg)
+  }
+
+  50% {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  to {
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+}
+
+@keyframes burger_before {
+  from {
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  50% {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    top: 0;
+    left: 50%;
+    background-color: var(--color-golden-fizz);
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+@keyframes burger_after_default {
+  from {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg)
+  }
+
+  50% {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  to {
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+}
+
+@keyframes burger_after {
+  from {
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  50% {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    bottom: 0;
+    left: 50%;
+    background-color: var(--color-golden-fizz);
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+// Стили
+.main-nav {
+  width: 100%;
+  min-width: 50px;
+  height: 56px;
+
+  margin: 20px 0 0 0;
+
+  z-index: 10;
+
+  @include mixins.respond-to(notDesktop) {
+    margin: 33px 0 0 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    height: 100%;
+
+    @include mixins.respond-to(notDesktop) {
+      justify-content: space-between;
+
+      padding: 0 5px;
+    }
+  }
+
+  &__logo-link {
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include mixins.respond-to(notDesktop) {
+        display: inline-block;
+
+        margin: 0 0 50px 0;
+      }
+    }
+  }
+
+  &__logo-img {
+    width: 124px;
+    min-width: 124px;
+    height: 50px;
+    min-height: 50px;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 66px;
+      min-width: auto;
+      height: 26px;
+      min-height: auto;
+    }
+  }
+
+  &__nav-menu {
+    display: flex;
+    align-items: center;
+
+    margin: 0 0 0 auto;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+
+    margin: 0 100px 0 0;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      width: 100%;
+
+      margin: 0 0 50px 0;
+    }
+  }
+
+  &__nav-item {
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+
+      margin: 0 0 20px 0;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      margin: 0 40px 0 0;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      margin: 0 90px 0 0;
+    }
+  }
+
+  &__nav-link {
+    font-family: var(--font-family-default);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    color: var(--color-black);
+  }
+
+  &__nav-aside {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tel-link {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 18px;
+    color: var(--color-black);
+
+    margin: 0 30px 0 0;
+  }
+
+  &__nav-menu--mobile {
+    @include mixins.respond-to(notDesktop) {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      height: calc(100vh);
+      background-color: var(--color-aqua-deep);
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-y: contain;
+
+      transform: translateX(-100%);
+      transition: transform 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+
+      padding: 48px calc(5% + 5px);
+
+      z-index: 15;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 80vw;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 80vw;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      width: 40vw;
+    }
+  }
+
+  &__nav-menu--mobile--active {
+    transform: translateX(0);
+    transition: transform 0.4s cubic-bezier(0.37, 0, 0.63, 1)
+  }
+
+  &__burger {
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 28px;
+    height: 20px;
+    outline: none;
+    border: none;
+
+    z-index: 15;
+
+    @include mixins.respond-to(notDesktop) {
+      display: flex;
+    }
+  }
+
+  &__burger-line {
+    position: relative;
+
+    width: 15px;
+    height: 2px;
+    background-color: var(--color-black);
+    border-radius: 5px;
+
+    transition: background-color 0.1s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 28px;
+      height: 2px;
+      background-color: var(--color-black);
+      border-radius: 5px;
+
+      animation-duration: 0.4s;
+      animation-name: burger_before_default;
+      animation-fill-mode: forwards;
+
+      transition: all 0.4s;
+
+      margin: 0 0 0 7px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 28px;
+      height: 2px;
+      background-color: var(--color-black);
+      border-radius: 5px;
+
+      animation-duration: 0.4s;
+      animation-name: burger_after_default;
+      animation-fill-mode: forwards;
+
+      transition: all 0.4s;
+
+      margin: 0 0 0 7px;
+    }
+  }
+
+  &__burger--active .main-nav__burger-line::before {
+    animation-duration: 0.4s;
+    animation-name: burger_before;
+    animation-fill-mode: forwards
+  }
+
+  &__burger--active .main-nav__burger-line::after {
+    animation-duration: 0.4s;
+    animation-name: burger_after;
+    animation-fill-mode: forwards;
+
+    transition: all 0.4s
+  }
+
+  &__burger--active .main-nav__burger-line {
+    background-color: transparent;
+
+    transition-delay: 0.4s;
+    transition: background-color 0.1s
+  }
+}

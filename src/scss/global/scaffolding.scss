@@ -1,0 +1,66 @@
+@use "../mixins";
+
+html {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	scrollbar-gutter: stable;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+*,
+:after,
+:before {
+	box-sizing: inherit;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	min-height: 100vh;
+
+	font-family: var(--font-family-default);
+	color: var(--color-white);
+
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.hover-red {
+	transition: color 0.1s;
+
+	&:hover {
+		color: var(--color-shiraz);
+
+		transition: color 0.1s;
+	}
+}
