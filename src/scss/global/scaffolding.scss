@@ -17,6 +17,8 @@ html {
 }
 
 body {
+	position: relative;
+
 	display: flex;
 	flex-direction: column;
 
@@ -28,6 +30,33 @@ body {
 
 	padding: 0 !important;
 	margin: 0 !important;
+
+	z-index: 1;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100vh;
+		background-color: rgba($color: #000000, $alpha: 0);
+		user-select: none;
+		pointer-events: none;
+
+		transition: background-color 0.3s;
+
+		z-index: 1;
+	}
+}
+
+.body-cover {
+	&::before {
+		background-color: rgba($color: #000000, $alpha: 0.8);
+
+		transition: background-color 0.3s;
+	}
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -59,7 +88,7 @@ input[type=number] {
 	transition: color 0.1s;
 
 	&:hover {
-		color: var(--color-shiraz);
+		color: #ad132f;
 
 		transition: color 0.1s;
 	}

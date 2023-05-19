@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var(--color-shiraz);
+  background-color: #ad132f;
   box-shadow: 0px 2px 50px rgba(173, 19, 47, 0.35);
   border-radius: 6px;
   cursor: pointer;
@@ -21,7 +21,7 @@
   padding: 20px 30px;
 
   &:hover {
-    background-color: var(--color-fuzzy-wuzzy-brown);
+    background-color: #bd4258;
 
     transition: background-color 0.3s;
   }

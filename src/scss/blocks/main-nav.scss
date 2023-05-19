@@ -37,7 +37,7 @@
   100% {
     top: 0;
     left: 50%;
-    background-color: var(--color-golden-fizz);
+    background-color: #AD132F;
     transform: translateX(-50%) rotate(45deg);
   }
 }
@@ -78,7 +78,7 @@
   100% {
     bottom: 0;
     left: 50%;
-    background-color: var(--color-golden-fizz);
+    background-color: #AD132F;
     transform: translateX(-50%) rotate(-45deg);
   }
 }
@@ -89,7 +89,7 @@
   min-width: 50px;
   height: 56px;
 
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
 
   z-index: 10;
 
@@ -149,42 +149,32 @@
     align-items: center;
 
     margin: 0 0 0 auto;
+
+    @include mixins.respond-to(onlyDesktopS) {
+      gap: 20px;
+    }
   }
 
   &__nav-list {
     display: flex;
     align-items: center;
 
+    gap: 30px;
+
     margin: 0 100px 0 0;
 
     @include mixins.respond-to(notDesktop) {
       flex-direction: column;
       align-items: flex-start;
+      gap: 35px;
 
       width: 100%;
 
-      margin: 0 0 50px 0;
+      margin: 0 0 80px 0;
     }
-  }
 
-  &__nav-item {
-
-    &:last-child {
+    @include mixins.respond-to(onlyDesktopS) {
       margin: 0;
-    }
-
-    @include mixins.respond-to(notDesktop) {
-      width: 100%;
-
-      margin: 0 0 20px 0;
-    }
-
-    @include mixins.respond-to(desktopD) {
-      margin: 0 40px 0 0;
-    }
-
-    @include mixins.respond-to(desktopM) {
-      margin: 0 90px 0 0;
     }
   }
 
@@ -194,11 +184,27 @@
     font-size: 15px;
     line-height: 15px;
     color: var(--color-black);
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 25px;
+      line-height: 30px;
+      color: var(--color-white);
+    }
   }
 
   &__nav-aside {
     display: flex;
     align-items: center;
+    gap: 30px;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      gap: 20px;
+    }
   }
 
   &__tel-link {
@@ -207,7 +213,25 @@
     line-height: 18px;
     color: var(--color-black);
 
-    margin: 0 30px 0 0;
+    @include mixins.respond-to(notDesktop) {
+      color: var(--color-white);
+
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--color-black);
+
+        transition: color 0.3s;
+      }
+    }
+  }
+
+  &__feedback-button {
+    @include mixins.respond-to(notDesktop) {
+      background-color: var(--color-white) !important;
+
+      color: #ad132f !important;
+    }
   }
 
   &__nav-menu--mobile {
@@ -221,7 +245,7 @@
       align-items: flex-start;
 
       height: calc(100vh);
-      background-color: var(--color-aqua-deep);
+      background-color: #AD132F;
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       overscroll-behavior-y: contain;
@@ -229,7 +253,7 @@
       transform: translateX(-100%);
       transition: transform 0.4s cubic-bezier(0.37, 0, 0.63, 1);
 
-      padding: 48px calc(5% + 5px);
+      padding: 44px calc(5% + 5px);
 
       z-index: 15;
     }
@@ -240,10 +264,6 @@
 
     @include mixins.respond-to(tabletOnly) {
       width: 80vw;
-    }
-
-    @include mixins.respond-to(onlyDesktopS) {
-      width: 40vw;
     }
   }
 
@@ -262,7 +282,7 @@
     outline: none;
     border: none;
 
-    z-index: 15;
+    z-index: 20;
 
     @include mixins.respond-to(notDesktop) {
       display: flex;
