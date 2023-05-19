@@ -64,24 +64,38 @@
   <section class="heading">
     <div class="heading__container base-container">
       <div class="heading__column">
-        <h1 class="heading__column-title base-title"></h1>
+        <h1 class="heading__column-title base-title">Бесплатная юридическая консультация</h1>
         <div class="heading__column-tabs">
-          <button class="heading__column-tab-button base-button" type="button">Юрист</button>
-          <button class="heading__column-tab-button base-button" type="button">Адвокат</button>
+          <button class="heading__column-tabs-button heading__column-tabs-button--active base-button" type="button" data-tab="1">Юрист</button>
+          <button class="heading__column-tabs-button base-button" type="button" data-tab="2">Адвокат</button>
         </div>
-        <p class="heading__column-text base-par"></p>
+        <p class="heading__column-text base-par">
+          Получите консультацию опытного юриста или адвоката бесплатно по телефону или онлайн
+        </p>
         <div class="heading__column-footer">
-          <a class="heading__column-wa-link base-link" href="#"></a>
-          <span class="heading__column-wa-text"></span>
+          <a class="heading__column-wa-link base-link" href="#">
+            <svg class="heading__column-wa-icon" width="28" height="28" aria-hidden="true">
+              <use href="img/icon/sprite.svg#wa-icon"></use>
+            </svg>
+            <span class="heading__column-wa-caption">Бесплатная консультация</span>
+          </a>
+          <span class="heading__column-wa-text">Ответим за 50 секунд</span>
         </div>
       </div>
 
       <div class="heading__image-block">
-        <figure class="heading__image base-figure">
-          <img src="" alt="" class="heading__img">
+        <figure class="heading__image heading__image--active base-figure" data-tab="1">
+          <img class="heading__img" src="img/image/tab-1.png" width="556" height="600" alt="#">
+        </figure>
+        <figure class="heading__image base-figure" data-tab="2" style="transform: scaleX(-1);">
+          <img class="heading__img" src="img/image/tab-1.png" width="556" height="600" alt="#">
         </figure>
       </div>
     </div>
+  </section>
+
+  <section>
+
   </section>
 </main>
 
