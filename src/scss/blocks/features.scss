@@ -1,0 +1,29 @@
+@use "../mixins";
+
+.features {
+
+  padding: 80px 0;
+
+  @include mixins.respond-to(mobileOnly) {
+    padding: 40px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 55px;
+    color: #000000;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template: auto / repeat(3, auto);
+    gap: 30px;
+  }
+}

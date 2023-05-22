@@ -1,3 +1,59 @@
 @use "../mixins";
 
-.graphic-section {}
+.graphic-section {
+
+  margin: 0 0 80px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    margin: 0 0 40px 0;
+  }
+
+  &__container {}
+
+  &__slider-wrapper {
+    @include mixins.respond-to(desktopD) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 183px;
+    height: 183px;
+  }
+
+  &__slider-pagination {
+    width: fit-content !important;
+
+    margin: 0 auto;
+
+    @include mixins.respond-to(notDesktop) {
+      display: block;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      display: none;
+    }
+
+    & .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      border: 1px solid #CDCDCD;
+
+      transition: border 0.3s;
+    }
+
+    & .swiper-pagination-bullet-active {
+      border: 5px solid #AD132F;
+
+      transition: border 0.3s;
+    }
+  }
+}

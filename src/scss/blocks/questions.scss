@@ -1,0 +1,102 @@
+@use "../mixins";
+
+.questions {
+
+  background-image: -webkit-image-set(url("../img/image/heading-bg.png") 1x);
+
+  @supports (background-image: -webkit-image-set(url("../img/image/heading-bg.webp") 1x)) {
+    background-image: -webkit-image-set(url("../img/image/heading-bg.webp") 1x);
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 84px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    padding: 42px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__title {
+    display: inline-block;
+
+    width: 550px;
+
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 55px;
+    color: #FFFFFF;
+  }
+
+  &__slider {
+    max-width: 100%;
+  }
+
+  &__slider-wrapper {
+    box-sizing: border-box !important;
+
+    @include mixins.respond-to(notDesktop) {
+      margin: 0 0 30px 0;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      margin: 0 0 30px 0;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      display: grid;
+      grid-template: repeat(2, auto) / repeat(4, auto);
+      grid-auto-flow: row;
+      gap: 30px;
+    }
+  }
+
+  &__slider-slide {
+    height: auto !important;
+    box-sizing: border-box !important;
+
+    @include mixins.respond-to(notDesktop) {
+      width: fit-content;
+    }
+
+    & .features-item {
+      height: 100%;
+      min-height: 332px;
+    }
+  }
+
+  &__slider-pagination {
+    width: fit-content !important;
+
+    margin: 0 auto;
+
+    @include mixins.respond-to(notDesktop) {
+      display: block;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      display: none;
+    }
+
+    & .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      border: 1px solid #CDCDCD;
+
+      transition: border 0.3s;
+    }
+
+    & .swiper-pagination-bullet-active {
+      border: 5px solid #AD132F;
+
+      transition: border 0.3s;
+    }
+  }
+}

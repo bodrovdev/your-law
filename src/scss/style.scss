@@ -25,12 +25,14 @@
 @use 'blocks/page-content';
 @use 'blocks/page-footer';
 
+@use 'blocks/features-item';
+@use 'blocks/feedback';
+
 @use 'blocks/main-nav';
 @use 'blocks/page-button';
 @use 'blocks/section-title';
 @use 'blocks/modal';
 @use 'blocks/heading';
 @use 'blocks/about';
-@use 'blocks/feedback';
-@use 'blocks/features-item';
 @use 'blocks/graphic-section';
+@use 'blocks/questions';@use 'blocks/features';

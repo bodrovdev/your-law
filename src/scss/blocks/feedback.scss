@@ -7,6 +7,14 @@
   gap: 30px;
 
   min-height: 500px;
+  background-image: -webkit-image-set(url("../img/image/feedback_bg_1.png") 1x);
+
+  @supports (background-image: -webkit-image-set(url("../img/image/feedback_bg_1.webp") 1x)) {
+    background-image: -webkit-image-set(url("../img/image/feedback_bg_1.webp") 1x);
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
 
   padding: 85px 0;
   margin: 80px 0;
