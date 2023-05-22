@@ -1,0 +1,28 @@
+<section class="feedback">
+  <div class="feedback__container base-container">
+    <h2 class="feedback__title base-title">@@title</h2>
+    <p class="feedback__subtitle base-par">@@text</p>
+    <form class="feedback__form" id="@form_id">
+      <div class="feedback__form-top">
+        <input class="feedback__form-top-input" placeholder="Имя" type="text" name="name" required>
+        <input class="feedback__form-top-input" placeholder="Телефон" type="tel" name="phone" required>
+        <input class="feedback__form-top-input" placeholder="Email" type="email" name="email">
+        <button class="feedback__form-submit page-button base-button" type="submit">Оставить заявку</button>
+      </div>
+      <div class="feedback__form-bottom">
+        <svg class="feedback__form-bottom-icon" width="12" height="10" aria-hidden="true">
+          <use href="img/icon/sprite.svg#form-icon"></use>
+        </svg>
+        <span class="feedback__form-bottom-caption">Отправляя заявку, вы соглашаетесь с правилами обработки персональных данных</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+  .feedback {
+    background-image: url('img/image/@@bg_image');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>

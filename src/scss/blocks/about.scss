@@ -1,7 +1,11 @@
 @use "../mixins";
 
 .about {
-  margin: 80px 0 0 0;
+  margin: 80px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    margin: 45px 0;
+  }
 
   &__container {
     display: flex;
@@ -12,18 +16,51 @@
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+    gap: 30px;
+
+    margin: 0 0 80px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      align-items: center;
+      gap: 45px;
+
+      margin: 0 0 45px 0;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      gap: 50px;
+    }
   }
 
   &__top-features {
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @include mixins.respond-to(notDesktop) {
+      gap: 30px;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      justify-content: space-between;
+    }
   }
 
   &__top-features-item {
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      gap: 10px;
+    }
   }
 
   &__top-features-wrapper {
@@ -32,11 +69,25 @@
     justify-content: center;
 
     width: 120px;
+    min-width: 120px;
     height: 120px;
+    min-height: 120px;
     border-radius: 50%;
     background-color: var(--color-white);
     border: 1px solid rgba(211, 222, 229, 0.5);
     box-shadow: 0px 30px 100px rgba(78, 90, 109, 0.1);
+
+    @include mixins.respond-to(notDesktop) {
+      width: 85px;
+      height: 85px;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      width: 85px;
+      min-width: 85px;
+      height: 85px;
+      min-height: 85px;
+    }
   }
 
   &__top-features-caption {
@@ -47,6 +98,21 @@
     font-weight: 600;
     font-size: 28px;
     line-height: 39px;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+      max-width: initial;
+
+      font-size: 18px;
+      line-height: 23px;
+      text-align: center;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      font-size: 20px;
+      line-height: 25px;
+      text-align: left;
+    }
   }
 
   &__top-callback {
@@ -65,5 +131,27 @@
     text-align: center;
 
     padding: 82px 69px;
+
+    @include mixins.respond-to(notDesktop) {
+      gap: 15px;
+
+      width: 100%;
+      min-height: 300px;
+
+      padding: 20px 10px;
+    }
+  }
+
+  &__bottom-features {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    grid-auto-flow: row;
+    justify-items: start;
+    gap: 30px;
+
+    @include mixins.respond-to(notDesktop) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

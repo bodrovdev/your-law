@@ -71,39 +71,78 @@
           <button class="about__top-callback-button page-button base-button" type="button">Получить консультацию</button>
         </div>
       </div>
-      <div class="about__bottom">
-        <div class="about__bottom-features">
-          <div class="about__bottom-features-item">
-            <svg class="about__bottom-features-icon" width="80" height="80" aria-hidden="true">
-              <use href="img/icon/sprite.svg#about-bottom-features-1-icon"></use>
-            </svg>
-            <h3 class="about__bottom-feature-title base-title">Экспертность</h3>
-            <p class="about__bottom-features-text base-par">
-              В штате исключительно опытные юристы и адвокаты. Средний стаж специалистов - 14 лет.
-            </p>
-          </div>
-          <div class="about__bottom-features-item">
-            <svg class="about__bottom-features-icon" width="80" height="80" aria-hidden="true">
-              <use href="img/icon/sprite.svg#about-bottom-features-2-icon"></use>
-            </svg>
-            <h3 class="about__bottom-feature-title base-title">Профильные юристы</h3>
-            <p class="about__bottom-features-text base-par">
-              При обращении в нашу компанию, мы подберем вам профильного юриста, работающего в одной отрасли права.
-            </p>
-          </div>
-          <div class="about__bottom-features-item">
-            <svg class="about__bottom-features-icon" width="80" height="80" aria-hidden="true">
-              <use href="img/icon/sprite.svg#about-bottom-features-3-icon"></use>
-            </svg>
-            <h3 class="about__bottom-feature-title base-title">Гарантии</h3>
-            <p class="about__bottom-features-text base-par">
-              Мы работаем по договору. Выполним все наши обязанности по договору в полном объеме. Наша задача - положительный результат!
-            </p>
-          </div>
-        </div>
+      <div class="about__bottom-features">
+
+        @@include('components/_bem/_feature-item.html', {
+        "icon": "about-bottom-features-1-icon",
+        "icon_width": "80",
+        "icon_height": "80",
+        "title": "Экспертность",
+        "text": "В штате исключительно опытные юристы и адвокаты. Средний стаж специалистов - 14 лет.",
+        })
+
+        @@include('components/_bem/_feature-item.html', {
+        "icon": "about-bottom-features-2-icon",
+        "icon_width": "80",
+        "icon_height": "80",
+        "title": "Профильные юристы",
+        "text": "При обращении в нашу компанию, мы подберем вам профильного юриста, работающего в одной отрасли права.",
+        })
+
+        @@include('components/_bem/_feature-item.html', {
+        "icon": "about-bottom-features-3-icon",
+        "icon_width": "80",
+        "icon_height": "80",
+        "title": "Гарантии",
+        "text": "Мы работаем по договору. Выполним все наши обязанности по договору в полном объеме. Наша задача - положительный результат!",
+        })
+
       </div>
     </div>
   </section>
+
+  @@include('components/_bem/_feedback.html', {
+  "title": "Как получить бесплатную консультацию юриста?",
+  "text": "Чтобы получить юридическую консультацию, необходимо оставить заявку на сайте, юрист перезвонит Вам в течение 3-4 минут",
+  "form_id": "feedback_form_1",
+  "bg_image": "feedback_bg_1.png",
+  })
+
+  <section class="graphic-section">
+    <div class="graphic-section__container base-container">
+      <div class="graphic-section__item">
+        <figure class="graphic-section__item-image base-figure">
+          <img class="graphic-section__item-img" src="img/image/graphic-section-1.png" alt="#">
+        </figure>
+      </div>
+      <div class="graphic-section__item">
+        <figure class="graphic-section__item-image base-figure">
+          <img class="graphic-section__item-img" src="img/image/graphic-section-2.png" alt="#">
+        </figure>
+      </div>
+      <div class="graphic-section__item">
+        <figure class="graphic-section__item-image base-figure">
+          <img class="graphic-section__item-img" src="img/image/graphic-section-3.png" alt="#">
+        </figure>
+      </div>
+      <div class="graphic-section__item">
+        <figure class="graphic-section__item-image base-figure">
+          <img class="graphic-section__item-img" src="img/image/graphic-section-4.png" alt="#">
+        </figure>
+      </div>
+      <div class="graphic-section__item">
+        <figure class="graphic-section__item-image base-figure">
+          <img class="graphic-section__item-img" src="img/image/graphic-section-5.png" alt="#">
+        </figure>
+      </div>
+      <div class="graphic-section__item">
+        <figure class="graphic-section__item-image base-figure">
+          <img class="graphic-section__item-img" src="img/image/graphic-section-6.png" alt="#">
+        </figure>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 @@include('components/_base/_base-footer.html')
