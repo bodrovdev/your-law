@@ -19,11 +19,22 @@
     font-size: 46px;
     line-height: 55px;
     color: #000000;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 25px;
+      line-height: 30px;
+    }
   }
 
   &__wrapper {
     display: grid;
     grid-template: auto / repeat(3, auto);
     gap: 30px;
+
+    @include mixins.respond-to(notDesktop) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 }

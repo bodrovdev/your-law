@@ -26,12 +26,18 @@
   &__title {
     display: inline-block;
 
-    width: 550px;
+    max-width: 550px;
 
     font-weight: 800;
     font-size: 46px;
     line-height: 55px;
     color: #FFFFFF;
+
+    @include mixins.respond-to(notDesktop) {
+
+      font-size: 25px;
+      line-height: 30px;
+    }
   }
 
   &__slider {

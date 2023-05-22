@@ -60,3 +60,12 @@ tabs_buttons.forEach((button) => {
     })
   })
 })
+
+let prices_items = Array.from(document.querySelectorAll('.prices__wrapper-item'));
+let price_showmore = document.querySelector('#prices_loadmore');
+
+prices_items.map((item, index) => { index <= 5 ? item.classList.add('prices__wrapper-item--active') : index });
+
+price_showmore.addEventListener('click', () => {
+  prices_items.map((item, index) => { index > 5 ? item.classList.add('prices__wrapper-item--active') : index });
+})
