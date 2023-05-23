@@ -1,0 +1,54 @@
+@use "../mixins";
+
+.job {
+  padding: 80px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    padding: 40px 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 80px;
+  }
+
+  &__column-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__column-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    & span:nth-child(1) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 40px;
+      height: 40px;
+      background-color: #AD132F;
+      border-radius: 50%;
+
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 16px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    & span:nth-child(2) {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      color: #212431;
+    }
+  }
+
+  &:nth-child(1) {}
+}

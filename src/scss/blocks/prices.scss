@@ -13,7 +13,7 @@
 
   padding: 80px 0;
 
-  @include mixins.respond-to(notDesktop) {
+  @include mixins.respond-to(mobileOnly) {
     padding: 40px 0;
   }
 
@@ -29,23 +29,29 @@
     line-height: 55px;
     color: #FFFFFF;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       font-size: 25px;
       line-height: 30px;
     }
   }
 
   &__wrapper {
-    align-self: center;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    justify-content: center;
     gap: 30px;
 
     margin: 0 0 10px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
   }
 
   &__wrapper-item {
+    position: absolute;
+
     display: flex;
     flex-direction: column;
 
@@ -56,9 +62,32 @@
     box-shadow: 0px 30px 100px rgba(78, 90, 109, 0.1);
     border-radius: 21px;
     overflow: hidden;
+    visibility: hidden;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 330px;
+    }
+
+    &--active {
+      position: relative;
+
+      visibility: visible;
+    }
 
     &:nth-child(5n - 4) {
       width: 790px;
+
+      @include mixins.respond-to(mobileOnly) {
+        width: 100%;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        width: 100%;
+      }
     }
   }
 
@@ -81,6 +110,10 @@
     height: 100%;
 
     padding: 30px 30px 40px 30px;
+
+    @include mixins.respond-to(mobileOnly) {
+      padding: 20px;
+    }
   }
 
   &__wrapper-item-name {
@@ -107,6 +140,10 @@
     color: #000000;
 
     margin: 0 0 30px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 20px 0;
+    }
   }
 
   &__wrapper-item-button {
@@ -130,6 +167,10 @@
     transition: background-color 0.3s, color 0.3s;
 
     padding: 20px 35px;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 auto;
+    }
 
     &:hover {
       background-color: #AD132F;

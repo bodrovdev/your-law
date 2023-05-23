@@ -61,11 +61,22 @@ tabs_buttons.forEach((button) => {
   })
 })
 
+// --- Кнопка "показать больше" в блоке с ценами
 let prices_items = Array.from(document.querySelectorAll('.prices__wrapper-item'));
 let price_showmore = document.querySelector('#prices_loadmore');
 
-prices_items.map((item, index) => { index <= 5 ? item.classList.add('prices__wrapper-item--active') : index });
+prices_items.map((item, index) => { index <= 4 ? item.classList.add('prices__wrapper-item--active') : console.log('') });
 
 price_showmore.addEventListener('click', () => {
-  prices_items.map((item, index) => { index > 5 ? item.classList.add('prices__wrapper-item--active') : index });
+  !price_showmore.classList.contains('active') ?
+    (function () {
+      price_showmore.classList.add('active');
+      price_showmore.textContent = 'Скрыть все услуги'
+      prices_items.map((item, index) => { index >= 5 ? item.classList.add('prices__wrapper-item--active') : console.log('') });
+    }()) :
+    (function () {
+      price_showmore.classList.remove('active');
+      price_showmore.textContent = 'Показать все услуги'
+      prices_items.map((item, index) => { index >= 5 ? item.classList.remove('prices__wrapper-item--active') : console.log('') });
+    }())
 })
