@@ -80,3 +80,14 @@ price_showmore.addEventListener('click', () => {
       prices_items.map((item, index) => { index >= 5 ? item.classList.remove('prices__wrapper-item--active') : console.log('') });
     }())
 })
+
+// --- Рейтинг в блоке отзывов
+let slides = document.querySelectorAll('.reviews__people-slider-slide');
+slides.forEach((slide) => {
+  for (let i = 0; i < slide.dataset.rating; i++) {
+    slide.querySelector('.reviews__people-slide-rating').innerHTML +=
+      `<svg class="reviews__people-rating-icon" width="16" height="16" aria-hidden="true">
+        <use href="img/icon/sprite.svg#rating-icon"></use>
+      </svg>`;
+  }
+})

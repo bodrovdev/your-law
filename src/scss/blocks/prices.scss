@@ -50,9 +50,7 @@
   }
 
   &__wrapper-item {
-    position: absolute;
-
-    display: flex;
+    display: none;
     flex-direction: column;
 
     width: 380px;
@@ -62,7 +60,6 @@
     box-shadow: 0px 30px 100px rgba(78, 90, 109, 0.1);
     border-radius: 21px;
     overflow: hidden;
-    visibility: hidden;
 
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
@@ -73,9 +70,7 @@
     }
 
     &--active {
-      position: relative;
-
-      visibility: visible;
+      display: flex;
     }
 
     &:nth-child(5n - 4) {
@@ -92,6 +87,8 @@
   }
 
   &__wrapper-item-image {
+    width: 100%;
+
     margin: 0 0 30px 0;
   }
 
