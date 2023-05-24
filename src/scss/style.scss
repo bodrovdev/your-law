@@ -2,6 +2,7 @@
 @use 'global/variables';
 @use 'node_modules/swiper/swiper-bundle.min.css';
 @use 'node_modules/aos/dist/aos.css';
+@use 'node_modules/@fancyapps/ui/dist/fancybox/fancybox.css';
 
 //Миксины
 @use 'mixins/font-face';
@@ -35,6 +36,8 @@
 @use 'blocks/heading';
 @use 'blocks/about';
 @use 'blocks/graphic-section';
-@use 'blocks/questions';@use 'blocks/features';
+@use 'blocks/questions';
+@use 'blocks/features';
 @use 'blocks/prices';
 @use 'blocks/job';
+@use 'blocks/reviews';

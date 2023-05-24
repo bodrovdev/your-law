@@ -9,15 +9,86 @@
 
   &__container {
     display: flex;
-    align-items: stretch;
+    align-items: flex-end;
     justify-content: flex-start;
     gap: 80px;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      gap: 20px;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 56px;
+    color: #212431;
+
+    margin: 0 0 30px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+
+  &__column {
+    &--left {
+      @include mixins.respond-to(tabletOnly) {
+        width: 50%;
+      }
+
+      @include mixins.respond-to(onlyDesktopS) {
+        width: 50%;
+      }
+    }
+
+    &--right {
+      display: flex;
+      flex-direction: column;
+
+      @include mixins.respond-to(tabletOnly) {
+        width: 50%;
+      }
+
+      @include mixins.respond-to(onlyDesktopS) {
+        width: 50%;
+      }
+    }
+  }
+
+  &__column-img {
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+      height: auto;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 100%;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      width: 100%;
+    }
   }
 
   &__column-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    margin: 0 0 40px 0;
   }
 
   &__column-list-item {
@@ -25,7 +96,22 @@
     align-items: center;
     gap: 12px;
 
+    &:not(:first-child) span:nth-child(1)::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+
+      width: 2px;
+      height: 20px;
+      background-color: #AD132F;
+
+      transform: translateX(-50%);
+    }
+
     & span:nth-child(1) {
+      position: relative;
+
       display: flex;
       align-items: center;
       justify-content: center;
@@ -50,5 +136,7 @@
     }
   }
 
-  &:nth-child(1) {}
+  &__column-button {
+    margin: auto 0 0 0;
+  }
 }

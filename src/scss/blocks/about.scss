@@ -149,9 +149,32 @@
     justify-items: start;
     gap: 30px;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       display: flex;
       flex-direction: column;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      display: grid;
+      grid-template: repeat(2, auto) / repeat(2, auto);
+      grid-template-areas:
+        "feature_1 feature_2"
+        "feature_3 feature_3";
+      gap: 15px;
+
+      & .features-item {
+        &:nth-child(1) {
+          grid-area: feature_1;
+        }
+
+        &:nth-child(2) {
+          grid-area: feature_2;
+        }
+
+        &:nth-child(3) {
+          grid-area: feature_3;
+        }
+      }
     }
   }
 }

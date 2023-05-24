@@ -1,0 +1,237 @@
+@use "../mixins";
+
+.reviews {
+  padding: 80px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    padding: 40px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: initial;
+
+    margin: 0;
+  }
+
+  &__title {
+    display: inline-block;
+
+    width: 100%;
+    max-width: 1296px;
+
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 55px;
+    color: #000000;
+
+    margin: 0 auto 30px auto;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 90%;
+
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__documents-slider-container {
+    position: relative;
+  }
+
+  &__documents-slider {
+    width: 100%;
+    max-width: 1296px;
+
+    margin: 0 auto;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 90%;
+    }
+  }
+
+  &__documents-slider-wrapper {
+    @include mixins.respond-to(notDesktop) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__documents-slider-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px;
+    height: 270px;
+
+    & img {
+      width: 300px;
+      height: 270px;
+    }
+
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__documents-slider-arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: calc(1296px + 168px);
+    height: 64px;
+    user-select: none;
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+  }
+
+  &__documents-slider-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+    pointer-events: all !important;
+
+    background-color: #FFFFFF;
+    border: 1px solid rgba(211, 222, 229, 0.5);
+    border-radius: 96px;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #AD132F;
+
+      transition: background-color 0.3s;
+    }
+  }
+
+  &__documents-slider-pagination {
+    width: fit-content !important;
+
+    margin: 0 auto;
+
+    @include mixins.respond-to(notDesktop) {
+      display: block;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      display: none;
+    }
+
+    & .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      border: 1px solid #CDCDCD;
+
+      transition: border 0.3s;
+    }
+
+    & .swiper-pagination-bullet-active {
+      border: 5px solid #AD132F;
+
+      transition: border 0.3s;
+    }
+  }
+
+  &__people-slider {
+    width: 100%;
+    max-width: 1296px;
+
+    margin: 0 auto;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 90%;
+    }
+  }
+
+  &__people-slider-wrapper {
+    margin: 0 0 40px 0;
+  }
+
+  &__people-slider-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 585px;
+    height: auto;
+
+    background-color: #FFFFFF;
+    border: 1px solid rgba(211, 222, 229, 0.5);
+    border-radius: 21px;
+
+    padding: 60px 60px 50px 50px;
+  }
+
+  &__people-slide-name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+
+    margin: 0 0 16px 0;
+  }
+
+  &__people-slide-body {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #352C2D;
+
+    margin: 0 0 24px 0;
+  }
+
+  &__people-slide-date {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #614E51;
+  }
+
+  &__people-slider-pagination {
+    width: fit-content !important;
+
+    margin: 0 auto;
+
+    & .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      border: 1px solid #CDCDCD;
+
+      transition: border 0.3s;
+    }
+
+    & .swiper-pagination-bullet-active {
+      border: 5px solid #AD132F;
+
+      transition: border 0.3s;
+    }
+  }
+}

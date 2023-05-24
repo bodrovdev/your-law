@@ -71,3 +71,52 @@ function question_slider() {
 }
 question_slider();
 window.addEventListener("resize", question_slider);
+
+let documents_slider = new Swiper(".reviews__documents-slider", {
+  direction: "horizontal",
+  spaceBetween: 30,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: "auto",
+    }
+  },
+
+  navigation: {
+    nextEl: '.reviews__documents-arrow--next',
+    prevEl: '.reviews__documents-arrow--prev',
+  },
+
+  pagination: {
+    el: ".reviews__documents-slider-pagination",
+    clickable: true,
+  },
+});
+
+let people_slider = new Swiper(".reviews__people-slider", {
+  direction: "horizontal",
+  spaceBetween: 30,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: "auto",
+    }
+  },
+
+  pagination: {
+    el: ".reviews__people-slider-pagination",
+    clickable: true,
+  },
+});
