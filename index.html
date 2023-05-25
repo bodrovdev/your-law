@@ -16,6 +16,32 @@
 
 <body>
 
+  <div class="modal" id="modal">
+    <div class="modal__wrapper">
+      <button class="modal__close follow-change base-button" id="modal_close">
+        <svg class="modal__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal__inner">
+        <h2 class="modal__inner-title base-title">Получите бесплатную консультацию</h2>
+        <span class="modal__inner-text">Заполните форму обратную связи, в течении 3-4 минут мы вам перезвоним</span>
+        <form class="feedback__form" id="feedback_form_modal">
+          <div class="feedback__form-top">
+            <input class="feedback__form-top-input" placeholder="Имя" type="text" name="name" required>
+            <input class="feedback__form-top-input" placeholder="Телефон" type="tel" name="phone" required>
+            <input class="feedback__form-top-input" placeholder="Email" type="email" name="email">
+            <button class="feedback__form-submit page-button base-button" type="submit">Оставить заявку</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal__success">
+        <span class="modal__success-text">Спасибо, ваша заявка отправлена</span>
+      </div>
+    </div>
+  </div>
+
   <header class="page-header">
     <nav class="main-nav">
       <div class="main-nav__container base-container">
@@ -47,7 +73,7 @@
 
           <div class="main-nav__nav-aside">
             <a class="main-nav__tel-link hover-red base-link" href="tel:8 (980) 418-74-71">8 (980) 418-74-71</a>
-            <button class="main-nav__feedback-button page-button base-button">Обратный звонок</button>
+            <button class="main-nav__feedback-button page-button base-button" id="modal_button" type="button">Обратный звонок</button>
           </div>
 
         </div>
@@ -128,7 +154,7 @@
           <p class="about__top-callback-text base-par">
             Необходимо оставить заявку на сайте, юрист перезвонит Вам в течение 3-4 минут
           </p>
-          <button class="about__top-callback-button page-button base-button" type="button">Получить консультацию</button>
+          <button class="about__top-callback-button page-button base-button" id="modal_button" type="button">Получить консультацию</button>
         </div>
       </div>
       <div class="about__bottom-features">
@@ -354,7 +380,7 @@
             <span class="prices__wrapper-item-name">Консультация юриста</span>
             <div class="prices__wrapper-item-desc">
               <span class="prices__wrapper-item-price">0 руб</span>
-              <button class="prices__wrapper-item-button base-button" type="button">Оставить заявку</button>
+              <button class="prices__wrapper-item-button base-button" id="modal_button" type="button">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -366,7 +392,7 @@
             <span class="prices__wrapper-item-name">Составление документов</span>
             <div class="prices__wrapper-item-desc">
               <span class="prices__wrapper-item-price">от 6 999 руб</span>
-              <button class="prices__wrapper-item-button base-button" type="button">Оставить заявку</button>
+              <button class="prices__wrapper-item-button base-button" id="modal_button" type="button">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -378,7 +404,7 @@
             <span class="prices__wrapper-item-name">Сопровождение сделок</span>
             <div class="prices__wrapper-item-desc">
               <span class="prices__wrapper-item-price">от 15 000 руб</span>
-              <button class="prices__wrapper-item-button base-button" type="button">Оставить заявку</button>
+              <button class="prices__wrapper-item-button base-button" id="modal_button" type="button">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -390,7 +416,7 @@
             <span class="prices__wrapper-item-name">Представление интересов в суде</span>
             <div class="prices__wrapper-item-desc">
               <span class="prices__wrapper-item-price">от 19 000 руб</span>
-              <button class="prices__wrapper-item-button base-button" type="button">Оставить заявку</button>
+              <button class="prices__wrapper-item-button base-button" id="modal_button" type="button">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -402,7 +428,7 @@
             <span class="prices__wrapper-item-name">Защита адвоката в суде</span>
             <div class="prices__wrapper-item-desc">
               <span class="prices__wrapper-item-price">от 45 000 руб</span>
-              <button class="prices__wrapper-item-button base-button" type="button">Оставить заявку</button>
+              <button class="prices__wrapper-item-button base-button" id="modal_button" type="button">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -414,7 +440,7 @@
             <span class="prices__wrapper-item-name">Консультация юриста</span>
             <div class="prices__wrapper-item-desc">
               <span class="prices__wrapper-item-price">0 руб</span>
-              <button class="prices__wrapper-item-button base-button" type="button">Оставить заявку</button>
+              <button class="prices__wrapper-item-button base-button" id="modal_button" type="button">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -426,7 +452,7 @@
             <span class="prices__wrapper-item-name">Составление документов</span>
             <div class="prices__wrapper-item-desc">
               <span class="prices__wrapper-item-price">от 6 999 руб</span>
-              <button class="prices__wrapper-item-button base-button" type="button">Оставить заявку</button>
+              <button class="prices__wrapper-item-button base-button" id="modal_button" type="button">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -438,7 +464,7 @@
             <span class="prices__wrapper-item-name">Сопровождение сделок</span>
             <div class="prices__wrapper-item-desc">
               <span class="prices__wrapper-item-price">от 15 000 руб</span>
-              <button class="prices__wrapper-item-button base-button" type="button">Оставить заявку</button>
+              <button class="prices__wrapper-item-button base-button" id="modal_button" type="button">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -450,7 +476,7 @@
             <span class="prices__wrapper-item-name">Представление интересов в суде</span>
             <div class="prices__wrapper-item-desc">
               <span class="prices__wrapper-item-price">от 19 000 руб</span>
-              <button class="prices__wrapper-item-button base-button" type="button">Оставить заявку</button>
+              <button class="prices__wrapper-item-button base-button" id="modal_button" type="button">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -462,7 +488,7 @@
             <span class="prices__wrapper-item-name">Защита адвоката в суде</span>
             <div class="prices__wrapper-item-desc">
               <span class="prices__wrapper-item-price">от 45 000 руб</span>
-              <button class="prices__wrapper-item-button base-button" type="button">Оставить заявку</button>
+              <button class="prices__wrapper-item-button base-button" id="modal_button" type="button">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -510,7 +536,7 @@
             <span>99.5% выигранных дел</span>
           </li>
         </ul>
-        <button class="job__column-button page-button base-button">Оставить заявку</button>
+        <button class="job__column-button page-button base-button" id="modal_button" type="button">Оставить заявку</button>
       </div>
     </div>
   </section>
@@ -703,7 +729,7 @@
 
         <div class="footer-top__nav-aside">
           <a class="footer-top__tel-link hover-red base-link" href="tel:8 (980) 418-74-71">8 (980) 418-74-71</a>
-          <button class="footer-top__feedback-button page-button base-button">Обратный звонок</button>
+          <button class="footer-top__feedback-button page-button base-button" id="modal_button" type="button">Обратный звонок</button>
         </div>
 
       </div>
@@ -719,7 +745,7 @@
         <a class="footer-bottom__email base-link" href="mailto:zakon@mail.ru">zakon@mail.ru</a>
         <a class="footer-bottom__isart base-link" href="https://is-art.ru/" target="_blank" rel="noreferrer">
           <span class="footer-bottom__isart-text">Разработано</span>
-          <svg class="footer-bottom__isart-logo" width="52" height="22" aria-hidden="true">
+          <svg class="footer-bottom__isart-icon" width="52" height="22" aria-hidden="true">
             <use href="img/icon/sprite.svg#isart-icon"></use>
           </svg>
         </a>
