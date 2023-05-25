@@ -1,6 +1,16 @@
 @use "../mixins";
 
 .footer-bottom {
+  padding: 0 0 80px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    padding: 0;
+  }
+
+  @include mixins.respond-to(onlyDesktopS) {
+    padding: 0;
+  }
+
   &__container {
     display: flex;
 
@@ -25,16 +35,19 @@
 
   &__wrapper {
     display: flex;
+    align-items: center;
     gap: 30px;
 
     @include mixins.respond-to(notDesktop) {
       flex-direction: column;
+      align-items: flex-start;
 
       margin: 0 0 40px 0;
     }
 
     @include mixins.respond-to(onlyDesktopS) {
       flex-direction: column;
+      align-items: flex-start;
 
       margin: 0 0 40px 0;
     }
@@ -54,6 +67,13 @@
     line-height: 14px;
     text-decoration: underline;
     color: #614E51;
+
+    transition: color 0.1s;
+
+    &:hover {
+      color: #AD132F;
+      transition: color 0.1s;
+    }
   }
 
   &__email {
@@ -66,14 +86,30 @@
 
   &__isart {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: 12px;
+
+    &:hover .footer-bottom__isart-text {
+      color: #AD132F;
+      transition: color 0.1s;
+    }
+
+    &:hover .footer-bottom__isart-icon {
+      filter: brightness(0) saturate(100%) invert(14%) sepia(90%) saturate(3937%) hue-rotate(340deg) brightness(79%) contrast(95%);
+      transition: filter 0.1s;
+    }
 
     &-text {
       font-weight: 500;
       font-size: 14px;
       line-height: 14px;
       color: #614E51;
+
+      transition: color 0.1s;
+    }
+
+    &-icon {
+      transition: filter 0.1s;
     }
   }
 
@@ -94,6 +130,15 @@
 
     @include mixins.respond-to(onlyDesktopS) {
       margin: auto 0 0 0;
+    }
+  }
+
+  &__socials-link {
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.5);
+      transition: transform 0.3s;
     }
   }
 }

@@ -91,3 +91,37 @@ slides.forEach((slide) => {
       </svg>`;
   }
 })
+
+// --- Модалка
+let modal_buttons = document.querySelectorAll('#modal_button');
+let modal = document.getElementById('modal');
+let modal_close = document.getElementById('modal_close');
+let modal_form = document.getElementById('feedback_form_modal');
+
+modal_buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    modal.classList.add('modal--active');
+    lock(modal);
+  })
+})
+
+modal_close.addEventListener('click', () => {
+  modal.classList.remove('modal--active');
+  unlock(modal);
+})
+
+modal.addEventListener('click', (e) => {
+  if (e.target !== e.currentTarget) {
+    return;
+  }
+  else {
+    modal.classList.remove('modal--active');
+    unlock(modal);
+  }
+})
+
+modal_form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  document.querySelector('.modal__inner').classList.add('modal__inner--hidden');
+  document.querySelector('.modal__success').classList.add('modal__success--active');
+})
