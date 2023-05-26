@@ -140,7 +140,7 @@ modal_form.addEventListener('submit', (e) => {
 })
 
 // --- Подтверждение отправки формы
-let feedback_forms = [document.querySelector('#feedback_form_1'), document.querySelector('#feedback_form_2')];
+let feedback_forms = document.querySelectorAll('.feedback__form');
 
 feedback_forms.forEach((form) => {
   form.addEventListener('submit', (e) => {
