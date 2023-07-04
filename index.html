@@ -10,91 +10,114 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
   <link href="css/style.min.css?v=1.0" rel="stylesheet">
   <title></title>
 </head>
 
 <body>
 
-  <div class="modal" id="modal">
-    <div class="modal__wrapper">
-      <button class="modal__close follow-change base-button" id="modal_close">
-        <svg class="modal__close-icon" width="20" height="20" alt="#">
-          <use href="img/icon/sprite.svg#modal-close-icon"></use>
-        </svg>
-      </button>
-      <div class="modal__inner">
-        <h2 class="modal__inner-title base-title">Получите бесплатную консультацию</h2>
-        <span class="modal__inner-text">Заполните форму обратную связи, в течении 3-4 минут мы вам перезвоним</span>
-        <form class="feedback__form" id="feedback_form_modal">
-          <div class="feedback__form-top">
-            <input class="feedback__form-top-input" placeholder="Имя" type="text" name="name" required>
-            <input class="feedback__form-top-input" placeholder="Телефон" type="tel" name="phone" required>
-            <input class="feedback__form-top-input" placeholder="Email" type="email" name="email">
-            <button class="feedback__form-submit page-button base-button" type="submit">Оставить заявку</button>
-          </div>
-        </form>
-      </div>
+  <div id="luxy">
 
-      <div class="modal__success">
-        <span class="modal__success-text">Спасибо, ваша заявка отправлена</span>
+    <div class="modal" id="modal">
+      <div class="modal__wrapper">
+        <button class="modal__close follow-change base-button" id="modal_close">
+          <svg class="modal__close-icon" width="20" height="20" alt="#">
+            <use href="img/icon/sprite.svg#modal-close-icon"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <h2 class="modal__inner-title base-title">Получите бесплатную консультацию</h2>
+          <span class="modal__inner-text">Заполните форму обратную связи, в течении 3-4 минут мы вам перезвоним</span>
+          <form class="feedback__form" id="feedback_form_modal">
+            <div class="feedback__form-top">
+              <input class="feedback__form-top-input" placeholder="Имя" type="text" name="name" required>
+              <input class="feedback__form-top-input" placeholder="Телефон" type="tel" name="phone" required>
+              <input class="feedback__form-top-input" placeholder="Email" type="email" name="email">
+              <button class="feedback__form-submit page-button base-button" type="submit">Оставить заявку</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal__success">
+          <span class="modal__success-text">Спасибо, ваша заявка отправлена</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <header class="page-header">
-    <nav class="main-nav">
-      <div class="main-nav__container base-container">
-        <a class="main-nav__logo-link base-link" href="index.html">
-          <svg class="main-nav__logo-icon" width="137" height="30" aria-hidden="true">
-            <use href="img/icon/sprite.svg#logo-icon"></use>
-          </svg>
-        </a>
-
-        <div class="main-nav__nav-menu main-nav__nav-menu--mobile" id="mobile_menu">
-
-          <a class="main-nav__logo-link main-nav__logo-link--mobile base-link" href="index.html">
+    <header class="page-header">
+      <nav class="main-nav">
+        <div class="main-nav__container base-container">
+          <a class="main-nav__logo-link base-link" href="index.html">
             <svg class="main-nav__logo-icon" width="137" height="30" aria-hidden="true">
               <use href="img/icon/sprite.svg#logo-icon"></use>
             </svg>
           </a>
 
-          <ul class="main-nav__nav-list base-list">
-            <li class="main-nav__nav-item">
-              <a class="main-nav__nav-link hover-red base-link" href="#about">О нас</a>
-            </li>
-            <li class="main-nav__nav-item">
-              <a class="main-nav__nav-link hover-red base-link" href="#services">Наши услуги</a>
-            </li>
-            <li class="main-nav__nav-item">
-              <a class="main-nav__nav-link hover-red base-link" href="#prices">Цены</a>
-            </li>
-          </ul>
+          <div class="main-nav__nav-menu main-nav__nav-menu--mobile" id="mobile_menu">
 
-          <div class="main-nav__nav-aside">
-            <a class="main-nav__tel-link hover-red base-link" href="tel:8 (980) 418-74-71">8 (980) 418-74-71</a>
-            <button class="main-nav__feedback-button page-button base-button" id="modal_button" type="button">Обратный звонок</button>
+            <a class="main-nav__logo-link main-nav__logo-link--mobile base-link" href="index.html">
+              <svg class="main-nav__logo-icon" width="137" height="30" aria-hidden="true">
+                <use href="img/icon/sprite.svg#logo-icon"></use>
+              </svg>
+            </a>
+
+            <ul class="main-nav__nav-list base-list">
+              <li class="main-nav__nav-item">
+                <a class="main-nav__nav-link hover-red base-link" href="#about">О нас</a>
+              </li>
+              <li class="main-nav__nav-item">
+                <a class="main-nav__nav-link hover-red base-link" href="#services">Наши услуги</a>
+              </li>
+              <li class="main-nav__nav-item">
+                <a class="main-nav__nav-link hover-red base-link" href="#prices">Цены</a>
+              </li>
+            </ul>
+
+            <div class="main-nav__nav-aside">
+              <a class="main-nav__tel-link hover-red base-link" href="tel:8 (980) 418-74-71">8 (980) 418-74-71</a>
+              <button class="main-nav__feedback-button page-button base-button" id="modal_button" type="button">Обратный звонок</button>
+            </div>
+
           </div>
 
+          <button class="main-nav__burger base-button" id="burger">
+            <span class="main-nav__burger-line"></span>
+          </button>
+
         </div>
-
-        <button class="main-nav__burger base-button" id="burger">
-          <span class="main-nav__burger-line"></span>
-        </button>
-
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
 <main class="page-content">
+
+  <div class="socials-follow">
+    <button class="socials-follow__link base-button" id="modal_button">
+      <img class="socials-follow__img" src="img/image/socials-follow-1.svg" width="60" height="60" alt="#">
+    </button>
+    <a class="socials-follow__link base-link" href="#">
+      <img class="socials-follow__img" src="img/image/socials-follow-2.svg" width="60" height="60" alt="#">
+    </a>
+    <a class="socials-follow__link base-link" href="#">
+      <img class="socials-follow__img" src="img/image/socials-follow-3.svg" width="60" height="60" alt="#">
+    </a>
+  </div>
+
   <section class="heading">
     <div class="heading__container base-container">
       <div class="heading__column">
         <h1 class="heading__column-title base-title">Бесплатная юридическая консультация</h1>
-        <div class="heading__column-tabs">
+        <!-- <div class="heading__column-tabs">
           <button class="heading__column-tabs-button heading__column-tabs-button--active base-button" type="button" data-tab="1">Юрист</button>
           <button class="heading__column-tabs-button base-button" type="button" data-tab="2">Адвокат</button>
-        </div>
+        </div> -->
         <p class="heading__column-text base-par">
           Получите консультацию опытного юриста или адвоката бесплатно по телефону или онлайн
         </p>
@@ -108,19 +131,68 @@
           <span class="heading__column-wa-text">Ответим за 50 секунд</span>
         </div>
       </div>
-
-      <div class="heading__image-block">
+      <!-- <div class="heading__image-block">
         <figure class="heading__image heading__image--active base-figure" data-tab="1">
           <img class="heading__img" src="img/image/tab-1.png" width="556" height="600" alt="#">
         </figure>
         <figure class="heading__image base-figure" data-tab="2" style="transform: scaleX(-1);">
           <img class="heading__img" src="img/image/tab-1.png" width="556" height="600" alt="#">
         </figure>
-      </div>
+      </div> -->
     </div>
   </section>
 
-  <section class="about" id="about">
+  <!-- ? 04.07.2023   -->
+  <section class="about-new">
+    <div class="about-new__container base-container">
+      <div class="about-new__top">
+        <div class="about-new__column about-new__column--left">
+          <h2 class="about-new__title base-title">О нас</h2>
+          <p class="about-new__subtitle base-par">
+            Обращаясь к нам, Вы экономите свое время, потому что именно в нашей компании Вы можете получить полный спектр услуг по защите Ваших прав и законных интересов. Вам не надо будет искать профессиональных юристов или экспертов, потому что именно
+            такие находятся у нас.
+          </p>
+          <p class="about-new__text base-par">
+            Специалисты нашей компании имеют профильное высшее образование полученное в ведущих ВУЗах Москвы, а также узкопрофильные специалисты прошедшие подготовку в образовательных учреждениях МВД и МинЮста, и постоянно повышают свой уровень проф
+            подготовки, проходя курсы повышения квалификации и отслеживают судебную практику Верховного суда Российской Федерации. С нами Вы защищены как потребитель, потому что мы единственная компания в Москве, которая может оказать Вам квалифицированную
+            экспертно-юридическую помощь, под ключ.
+          </p>
+        </div>
+        <figure class="about-new__column about-new__column--right about-new__image base-figure">
+          <img class="about-new__img" src="img/image/about-new.png" width="568" height="467" alt="#">
+        </figure>
+      </div>
+      <div class="about__top-features">
+        <div class="about__top-features-item">
+          <span class="about__top-features-wrapper">
+            <svg class="about__top-features-icon" width="45" height="60" aria-hidden="true">
+              <use href="img/icon/sprite.svg#about-top-features-1-icon"></use>
+            </svg>
+          </span>
+          <span class="about__top-features-caption">Мы выиграли 99,8% судебных процессов</span>
+        </div>
+        <div class="about__top-features-item">
+          <span class="about__top-features-wrapper">
+            <svg class="about__top-features-icon" width="45" height="60" aria-hidden="true">
+              <use href="img/icon/sprite.svg#about-top-features-2-icon"></use>
+            </svg>
+          </span>
+          <span class="about__top-features-caption">0,02% пришли на примирение</span>
+        </div>
+        <div class="about__top-features-item">
+          <span class="about__top-features-wrapper">
+            <svg class="about__top-features-icon" width="45" height="60" aria-hidden="true">
+              <use href="img/icon/sprite.svg#about-top-features-3-icon"></use>
+            </svg>
+          </span>
+          <span class="about__top-features-caption">За последние три года мы проконсультировали 10 000+ человек</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ? 04.07.2023   -->
+
+  <!-- <section class="about" id="about">
     <div class="about__container base-container">
       <div class="about__top">
         <div class="about__top-features">
@@ -185,164 +257,135 @@
 
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section class="feedback">
-  <div class="feedback__container base-container">
-    <h2 class="feedback__title base-title">Как получить бесплатную консультацию юриста?</h2>
-    <p class="feedback__subtitle base-par">Чтобы получить юридическую консультацию, необходимо оставить заявку на сайте, юрист перезвонит Вам в течение 3-4 минут</p>
-    <form class="feedback__form">
-      <div class="feedback__form-top">
-        <input class="feedback__form-top-input" placeholder="Имя" type="text" name="name" required>
-        <input class="feedback__form-top-input" placeholder="Телефон" type="tel" name="phone" required>
-        <input class="feedback__form-top-input" placeholder="Email" type="email" name="email">
-        <button class="feedback__form-submit page-button base-button" type="submit">Оставить заявку</button>
-      </div>
-      <div class="feedback__form-bottom">
-        <svg class="feedback__form-bottom-icon" width="12" height="10" aria-hidden="true">
-          <use href="img/icon/sprite.svg#form-icon"></use>
-        </svg>
-        <span class="feedback__form-bottom-caption">Отправляя заявку, вы соглашаетесь с правилами обработки персональных данных</span>
-      </div>
-    </form>
-  </div>
-</section>
-
-<style>
-  .feedback {
-    background-image: url('img/image/feedback_bg_1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-</style>
-
-  <section class="graphic-section">
-    <div class="graphic-section__container base-container">
-      <div class="graphic-section__slider swiper">
-        <div class="graphic-section__slider-wrapper swiper-wrapper">
-          <div class="graphic-section__item graphic-section__slide swiper-slide">
-            <figure class="swiper-slide-image base-figure">
-              <img class="swiper-slide-img" src="img/image/icon-slider-1.png" width="100" height="100" alt="#">
-            </figure>
-          </div>
-          <div class="graphic-section__item graphic-section__slide swiper-slide">
-            <figure class="swiper-slide-image base-figure">
-              <img class="swiper-slide-img" src="img/image/icon-slider-2.png" width="100" height="100" alt="#">
-            </figure>
-          </div>
-          <div class="graphic-section__item graphic-section__slide swiper-slide">
-            <figure class="swiper-slide-image base-figure">
-              <img class="swiper-slide-img" src="img/image/icon-slider-3.png" width="100" height="100" alt="#">
-            </figure>
-          </div>
-          <div class="graphic-section__item graphic-section__slide swiper-slide">
-            <figure class="swiper-slide-image base-figure">
-              <img class="swiper-slide-img" src="img/image/icon-slider-4.png" width="100" height="100" alt="#">
-            </figure>
-          </div>
-          <div class="graphic-section__item graphic-section__slide swiper-slide">
-            <figure class="swiper-slide-image base-figure">
-              <img class="swiper-slide-img" src="img/image/icon-slider-5.png" width="100" height="100" alt="#">
-            </figure>
-          </div>
-          <div class="graphic-section__item graphic-section__slide swiper-slide">
-            <figure class="swiper-slide-image base-figure">
-              <img class="swiper-slide-img" src="img/image/icon-slider-6.png" width="100" height="100" alt="#">
-            </figure>
-          </div>
-        </div>
-        <div class="graphic-section__slider-pagination"></div>
-      </div>
-    </div>
-  </section>
-
+  <!-- ? 04.07.2023   -->
   <section class="questions" id="services">
     <div class="questions__container base-container">
       <h2 class="questions__title base-title">По каким вопросам мы консультируем</h2>
-      <div class="questions__slider swiper">
-        <div class="questions__slider-wrapper swiper-wrapper">
-          <div class="questions__slider-slide swiper-slide">
-            <div class="features-item">
+
+      <div class="questions__slider-container">
+        <div class="questions__slider-arrows">
+          <div class="questions__slider-arrow questions__slider-arrow--prev">
+            <svg class="questions__slider-arrow-icon" width="12" height="20" aria-hidden="true">
+              <use href="img/icon/sprite.svg#slider-arrow-icon"></use>
+            </svg>
+          </div>
+          <div class="questions__slider-arrow questions__slider-arrow--next" style="transform:scaleX(-1)">
+            <svg class="questions__slider-arrow-icon" width="12" height="20" aria-hidden="true">
+              <use href="img/icon/sprite.svg#slider-arrow-icon"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="questions__slider swiper">
+          <div class="questions__slider-wrapper swiper-wrapper">
+            <div class="questions__slider-slide swiper-slide">
+              <div class="features-item">
   <svg class="features-item__icon" width="83" height="64" aria-hidden="true">
     <use href="img/icon/sprite.svg#questions-features-1-icon"></use>
   </svg>
   <h3 class="features-item__title base-title">Адвокат</h3>
   <p class="features-item__text base-par">Защита в суде, выезды в СИЗО, защита на стадии предварительного следствия и другие вопросы, касающиеся УК РФ</p>
 </div>
-          </div>
-          <div class="questions__slider-slide swiper-slide">
-            <div class="features-item">
+            </div>
+            <div class="questions__slider-slide swiper-slide">
+              <div class="features-item">
   <svg class="features-item__icon" width="70" height="64" aria-hidden="true">
     <use href="img/icon/sprite.svg#questions-features-2-icon"></use>
   </svg>
   <h3 class="features-item__title base-title">Наследство</h3>
   <p class="features-item__text base-par">Вопросы наследования, недостойный наследник, оспорить наследство, восстановление сроков, выделение долей и другие вопросы наследства</p>
 </div>
-          </div>
-          <div class="questions__slider-slide swiper-slide">
-            <div class="features-item">
+            </div>
+            <div class="questions__slider-slide swiper-slide">
+              <div class="features-item">
   <svg class="features-item__icon" width="57" height="64" aria-hidden="true">
     <use href="img/icon/sprite.svg#questions-features-3-icon"></use>
   </svg>
   <h3 class="features-item__title base-title">Юрист по банкам, МФО, КПК</h3>
   <p class="features-item__text base-par">Споры с банками, невыплата кредитов, списание долгов, обман от МФО, незаконное начисление процентов</p>
 </div>
-          </div>
-          <div class="questions__slider-slide swiper-slide">
-            <div class="features-item">
+            </div>
+            <div class="questions__slider-slide swiper-slide">
+              <div class="features-item">
   <svg class="features-item__icon" width="59" height="64" aria-hidden="true">
     <use href="img/icon/sprite.svg#questions-features-4-icon"></use>
   </svg>
   <h3 class="features-item__title base-title">Юристы по защите прав потребителей</h3>
   <p class="features-item__text base-par">Возврат товара, обман со стороны продавца, отказ от навязанных услуг, взыскание неустойки и штрафа</p>
 </div>
-          </div>
-          <div class="questions__slider-slide swiper-slide">
-            <div class="features-item">
+            </div>
+            <div class="questions__slider-slide swiper-slide">
+              <div class="features-item">
   <svg class="features-item__icon" width="70" height="64" aria-hidden="true">
     <use href="img/icon/sprite.svg#questions-features-5-icon"></use>
   </svg>
   <h3 class="features-item__title base-title">Жилищный юрист</h3>
   <p class="features-item__text base-par">Выселение из квартиры, оспаривание сделок, приватизация жилья и другие вопросы</p>
 </div>
-          </div>
-          <div class="questions__slider-slide swiper-slide">
-            <div class="features-item">
+            </div>
+            <div class="questions__slider-slide swiper-slide">
+              <div class="features-item">
   <svg class="features-item__icon" width="62" height="64" aria-hidden="true">
     <use href="img/icon/sprite.svg#questions-features-6-icon"></use>
   </svg>
   <h3 class="features-item__title base-title">Земельный юрист</h3>
   <p class="features-item__text base-par">Установление границ, межевание участка, оспаривание права собственности</p>
 </div>
-          </div>
-          <div class="questions__slider-slide swiper-slide">
-            <div class="features-item">
+            </div>
+            <div class="questions__slider-slide swiper-slide">
+              <div class="features-item">
   <svg class="features-item__icon" width="55" height="64" aria-hidden="true">
     <use href="img/icon/sprite.svg#questions-features-7-icon"></use>
   </svg>
   <h3 class="features-item__title base-title">Семейный юрист</h3>
   <p class="features-item__text base-par">Развод, раздел имущества, алименты, установление или оспаривание отцовства</p>
 </div>
-          </div>
-          <div class="questions__slider-slide swiper-slide">
-            <div class="features-item">
+            </div>
+            <div class="questions__slider-slide swiper-slide">
+              <div class="features-item">
   <svg class="features-item__icon" width="55" height="64" aria-hidden="true">
     <use href="img/icon/sprite.svg#questions-features-8-icon"></use>
   </svg>
   <h3 class="features-item__title base-title">Трудовой юрист</h3>
   <p class="features-item__text base-par">Незаконное увольнение, невыплата заработной платы, восстановление на работе</p>
 </div>
+            </div>
           </div>
+          <div class="questions__slider-pagination"></div>
         </div>
-        <div class="questions__slider-pagination"></div>
       </div>
     </div>
   </section>
+  <!-- ? 04.07.2023   -->
 
   <section class="features">
     <div class="features__container base-container">
       <h2 class="features__title base-title">Наши преимущества</h2>
       <div class="features__wrapper">
+        <div class="features-item">
+  <svg class="features-item__icon" width="80" height="80" aria-hidden="true">
+    <use href="img/icon/sprite.svg#about-bottom-features-1-icon"></use>
+  </svg>
+  <h3 class="features-item__title base-title">Экспертность</h3>
+  <p class="features-item__text base-par">В штате исключительно опытные юристы и адвокаты. Средний стаж специалистов - 14 лет.</p>
+</div>
+
+        <div class="features-item">
+  <svg class="features-item__icon" width="80" height="80" aria-hidden="true">
+    <use href="img/icon/sprite.svg#about-bottom-features-2-icon"></use>
+  </svg>
+  <h3 class="features-item__title base-title">Профильные юристы</h3>
+  <p class="features-item__text base-par">При обращении в нашу компанию, мы подберем вам профильного юриста, работающего в одной отрасли права.</p>
+</div>
+
+        <div class="features-item">
+  <svg class="features-item__icon" width="80" height="80" aria-hidden="true">
+    <use href="img/icon/sprite.svg#about-bottom-features-3-icon"></use>
+  </svg>
+  <h3 class="features-item__title base-title">Гарантии</h3>
+  <p class="features-item__text base-par">Мы работаем по договору. Выполним все наши обязанности по договору в полном объеме. Наша задача - положительный результат!</p>
+</div>
         <div class="features-item">
   <svg class="features-item__icon" width="90" height="80" aria-hidden="true">
     <use href="img/icon/sprite.svg#features-1-icon"></use>
@@ -499,11 +542,7 @@
 
   <section class="job">
     <div class="job__container base-container">
-      <div class="job__column job__column--left">
-        <figure class="job__column-image base-figure">
-          <img class="job__column-img" src="img/image/job.png" width="680" height="544" alt="#">
-        </figure>
-      </div>
+
       <div class="job__column job__column--right">
         <h2 class="job__title base-title">Как мы работаем</h2>
         <ul class="job__column-list base-list">
@@ -536,8 +575,14 @@
             <span>99.5% выигранных дел</span>
           </li>
         </ul>
-        <button class="job__column-button page-button base-button" id="modal_button" type="button">Оставить заявку</button>
       </div>
+
+      <div class="job__column job__column--left">
+        <figure class="job__column-image base-figure">
+          <img class="job__column-img" src="img/image/job.png" width="680" height="544" alt="#">
+        </figure>
+      </div>
+
     </div>
   </section>
 
@@ -673,34 +718,45 @@
     </div>
   </section>
 
-  <section class="feedback">
-  <div class="feedback__container base-container">
-    <h2 class="feedback__title base-title">Остались вопросы?</h2>
-    <p class="feedback__subtitle base-par">Задайте их юристу</p>
-    <form class="feedback__form">
-      <div class="feedback__form-top">
-        <input class="feedback__form-top-input" placeholder="Имя" type="text" name="name" required>
-        <input class="feedback__form-top-input" placeholder="Телефон" type="tel" name="phone" required>
-        <input class="feedback__form-top-input" placeholder="Email" type="email" name="email">
-        <button class="feedback__form-submit page-button base-button" type="submit">Оставить заявку</button>
+  <section class="graphic-section">
+    <div class="graphic-section__container base-container">
+      <div class="graphic-section__slider swiper">
+        <div class="graphic-section__slider-wrapper swiper-wrapper">
+          <div class="graphic-section__item graphic-section__slide swiper-slide">
+            <figure class="swiper-slide-image base-figure">
+              <img class="swiper-slide-img" src="img/image/icon-slider-1.png" width="100" height="100" alt="#">
+            </figure>
+          </div>
+          <div class="graphic-section__item graphic-section__slide swiper-slide">
+            <figure class="swiper-slide-image base-figure">
+              <img class="swiper-slide-img" src="img/image/icon-slider-2.png" width="100" height="100" alt="#">
+            </figure>
+          </div>
+          <div class="graphic-section__item graphic-section__slide swiper-slide">
+            <figure class="swiper-slide-image base-figure">
+              <img class="swiper-slide-img" src="img/image/icon-slider-3.png" width="100" height="100" alt="#">
+            </figure>
+          </div>
+          <div class="graphic-section__item graphic-section__slide swiper-slide">
+            <figure class="swiper-slide-image base-figure">
+              <img class="swiper-slide-img" src="img/image/icon-slider-4.png" width="100" height="100" alt="#">
+            </figure>
+          </div>
+          <div class="graphic-section__item graphic-section__slide swiper-slide">
+            <figure class="swiper-slide-image base-figure">
+              <img class="swiper-slide-img" src="img/image/icon-slider-5.png" width="100" height="100" alt="#">
+            </figure>
+          </div>
+          <div class="graphic-section__item graphic-section__slide swiper-slide">
+            <figure class="swiper-slide-image base-figure">
+              <img class="swiper-slide-img" src="img/image/icon-slider-6.png" width="100" height="100" alt="#">
+            </figure>
+          </div>
+        </div>
+        <div class="graphic-section__slider-pagination"></div>
       </div>
-      <div class="feedback__form-bottom">
-        <svg class="feedback__form-bottom-icon" width="12" height="10" aria-hidden="true">
-          <use href="img/icon/sprite.svg#form-icon"></use>
-        </svg>
-        <span class="feedback__form-bottom-caption">Отправляя заявку, вы соглашаетесь с правилами обработки персональных данных</span>
-      </div>
-    </form>
-  </div>
-</section>
-
-<style>
-  .feedback {
-    background-image: url('img/image/feedback_bg_2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-</style>
+    </div>
+  </section>
 
 </main>
 
@@ -780,6 +836,8 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
 <script src="js/index.min.js?v=1.0"></script>
+
+</div>
 
 </body>
 
