@@ -151,3 +151,8 @@ feedback_forms.forEach((form) => {
     document.querySelector('.modal__success').classList.add('modal__success--active');
   })
 });
+
+// --- Анимация появления ссылок на соцсети с загрузкой страницы
+window.addEventListener('load', () => {
+  document.querySelectorAll('.socials-follow__link').forEach((link) => { link.classList.add('socials-follow__link--active') });
+})

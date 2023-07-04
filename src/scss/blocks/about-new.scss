@@ -1,0 +1,126 @@
+@use "../mixins";
+
+.about-new {
+  margin: 100px 0 80px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    margin: 50px 0 40px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 45px;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    &--left {
+      @include mixins.respond-to(notDesktop) {
+        order: 2;
+      }
+    }
+
+    &--right {
+      @include mixins.respond-to(notDesktop) {
+        order: 1;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 56px;
+    color: #212431;
+
+    margin: 0 0 18px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #352C2D;
+
+    margin: 0 0 41px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #352C2D;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  &__image {
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+      height: auto;
+      max-height: 467px;
+    }
+  }
+
+  &__container {
+    & .about__top-features {
+      flex-direction: row;
+      gap: 115px;
+
+      @include mixins.respond-to(notDesktop) {
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+
+    & .about__top-features-item {
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include mixins.respond-to(notDesktop) {
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+
+    & .about__top-features-caption {
+      max-width: none;
+    }
+  }
+}

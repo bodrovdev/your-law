@@ -2,10 +2,10 @@
 
 .prices {
 
-  background-image: -webkit-image-set(url("../img/image/heading-bg.png") 1x);
+  background-image: -webkit-image-set(url("../img/image/black-background.png") 1x);
 
-  @supports (background-image: -webkit-image-set(url("../img/image/heading-bg.webp") 1x)) {
-    background-image: -webkit-image-set(url("../img/image/heading-bg.webp") 1x);
+  @supports (background-image: -webkit-image-set(url("../img/image/black-background.webp") 1x)) {
+    background-image: -webkit-image-set(url("../img/image/black-background.webp") 1x);
   }
 
   background-size: cover;
@@ -39,7 +39,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 30px;
 
     margin: 0 0 10px 0;
@@ -53,7 +53,7 @@
     display: none;
     flex-direction: column;
 
-    width: 380px;
+    width: 410px;
     min-height: 370px;
     background: #FFFFFF;
     // border: 1px solid rgba(211, 222, 229, 0.5);
@@ -74,7 +74,7 @@
     }
 
     &:nth-child(5n - 4) {
-      width: 790px;
+      width: 850px;
 
       @include mixins.respond-to(mobileOnly) {
         width: 100%;

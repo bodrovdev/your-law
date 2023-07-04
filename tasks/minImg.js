@@ -5,7 +5,7 @@ const plumber = require('gulp-plumber');
 
 // Минификация изображений
 module.exports = function minImg(browserSync) {
-	return src('src/img/image/**/*.+(png|jpg|jpeg)')
+	return src('src/img/image/*.+(png|jpg|jpeg)')
 		.pipe(plumber())
 		.pipe(gulpSquoosh(({ filePath }) => {
 			const imageExtension = path.extname(filePath);
@@ -23,6 +23,6 @@ module.exports = function minImg(browserSync) {
 				},
 			};
 		}))
-		.pipe(dest('build/img/image'))
+		.pipe(dest('build/img/image/'))
 		.pipe(browserSync.stream())
 };

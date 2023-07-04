@@ -36,41 +36,32 @@ function graphic_slider() {
 graphic_slider();
 window.addEventListener("resize", graphic_slider);
 
-var question_slider_init = false;
+let question_slider = new Swiper(".questions__slider", {
+  direction: "horizontal",
+  spaceBetween: 30,
 
-function question_slider() {
-  if (window.innerWidth <= 1279) {
-    if (!question_slider_init) {
-      question_slider_init = true;
-      var question_slider = new Swiper(".questions__slider", {
-        direction: "horizontal",
-        spaceBetween: 10,
-
-        breakpoints: {
-          320: {
-            slidesPerView: 1
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          }
-        },
-
-        pagination: {
-          el: ".questions__slider-pagination",
-          clickable: true,
-        },
-      });
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: "auto",
+    },
+    1280: {
+      slidesPerView: 3,
     }
-  } else if (question_slider_init) {
-    question_slider.destroy();
-    question_slider_init = false;
-  }
-}
-question_slider();
-window.addEventListener("resize", question_slider);
+  },
+
+  navigation: {
+    nextEl: '.questions__slider-arrow--next',
+    prevEl: '.questions__slider-arrow--prev',
+  },
+
+  pagination: {
+    el: ".questions__slider-pagination",
+    clickable: true,
+  },
+});
 
 let documents_slider = new Swiper(".reviews__documents-slider", {
   direction: "horizontal",
